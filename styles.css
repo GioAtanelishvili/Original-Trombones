@@ -1,0 +1,198 @@
+:root {
+    font-size: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DDDDDD;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* CSS rules for heading part */
+#header {
+    background-color: rgb(255, 204, 0);;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5em;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+#header-img {
+    width: max(300px, 35%);
+}
+
+#nav-bar {
+    width: max(350px, 60%);
+}
+
+#nav-bar > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.nav-link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    margin-right: 3em;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+/* For mobile phones and tablets*/
+@media (max-width: 700px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-bar > ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-link {
+        margin-top: 0.2em;
+    }
+}
+
+/* CSS rules for introductory section */
+#intro {
+    background-image: url("https://www.wfmt.com/wp-content/uploads/2019/07/trombone-apocalypse.jpg");
+    background-position: 30% 30%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 85%;
+    margin: 4em auto;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+#title {
+    font-size: clamp(1.3em, 4vw, 2em);
+    text-align: center;
+    background-color: rgba(214, 200, 200, 0.5);
+    align-self: center;
+    min-width: 300px;
+    padding: 0.5em;
+}
+
+#form {
+    align-self: center;
+    text-align: center;
+}
+
+#email, #submit{
+    font-size: clamp(1.1em, 3vw, 1.3em);
+    border: 1px solid black;
+    margin-top: 0.3em;
+}
+
+#submit {
+    background-color:rgb(255, 204, 0);
+    cursor: pointer;
+}
+
+/* For mobile phones and tablets*/
+@media (max-width: 700px) {
+    #intro {
+        width: 99%;
+        margin: 7em auto;
+        background-size: auto;
+        padding-bottom: 1.5em;
+    }
+}
+
+/* CSS rules for features section */
+#features {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#materials, #shipping, #quality {
+    padding-left: 3em;
+}
+
+/* For mobile phones and tablets*/
+@media (max-width: 700px) {
+    #features {
+        width: 90%;
+        margin-top: -4em;
+    }
+
+    #materials, #shipping, #quality {
+        padding-left: 1em;
+    }
+}
+
+/* CSS rules for how it works section */
+#video {
+    display: block;
+    width: min(98%, 560px);
+    margin: 3em auto;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* CSS rules for pricing section */
+#pricing {
+    width: 70%;
+    margin: 5em auto;
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.pricing-divs {
+    border: 1px solid black;
+    flex-basis: 25%;
+    min-width: 25ch;
+    text-align: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-divs > ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+    line-height: 2.3;
+    margin-top: 0;
+}
+
+.pricing-divs > p {
+    background-color: rgb(255, 204, 0);
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+.pricing-divs .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
